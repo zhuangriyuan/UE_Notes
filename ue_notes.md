@@ -1,10 +1,5 @@
 # Unreal
 
-### Material
-
-Camera Vector已经normalize了
-Camera Position - World Position没有normalize
-
 ## Types
 1. __Opaque（不透明）__
 完全不透明，没有透明通道（Alpha 会被忽略）
@@ -35,6 +30,11 @@ __支持硬边透明，但不能渐变透明__
 > 火焰、魔法、能量光效
 > 爆炸火花、科幻 UI 发光线条
 > 光照贴花、镜头炫光（Lens Flare）
+
+### Material
+
+Camera Vector已经normalize了
+Camera Position - World Position没有normalize
 
 ## Material Nodes
 __Flatten Normal__
