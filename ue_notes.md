@@ -89,6 +89,10 @@ __Fmod__
 
 ## Niagara
 
+#### Expression
+Particles.RibbonID
+> 用于Ribbon
+
 __Dynamic Paramater__
 > 可以和material属性联动
 
