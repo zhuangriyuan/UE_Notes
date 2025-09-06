@@ -1,5 +1,20 @@
 # Unreal
 
+## Level搭建
+__Directional Light__
+> intensity 0.8
+
+__Exponential Height Fog__ 
+> 颜色默认为黑所以没效果
+> __Fog Density__ 1.0
+> __Start Distance__ 调整
+
+__PostProcess Volume__
+> __Unbound__，Exposure中 __MinEV100__ 和 __MaxEV100__ 设置为1，__Exposure Compensation__ 为0
+
+__Sky Light__
+> intensity 3, 捕获天空光照反射
+
 ## Types
 1. __Opaque（不透明）__
 完全不透明，没有透明通道（Alpha 会被忽略）
@@ -79,7 +94,7 @@ __LinearGradient__
 > 黑白过度
 
 __Sphere Mask__
-> create a sphere mask, input A (TexCoord), input B (0.5) center at uv0.5, radius 0.5, hardness 0
+> create a sphere mask, input A (TexCoord), input B (0.5, 0.5) center at uv0.5, radius 0.5, hardness 0
 
 __Frac__
 > 15.25 return 0.25
@@ -88,6 +103,9 @@ __Fmod__
 > %
 
 ## Niagara
+
+ __Translucent__ - 会显示黑色
+ __Additive__ - 黑色会变透明
 
 #### Expression
 Particles.RibbonID
@@ -113,3 +131,13 @@ __Event__
 __Spawn Particles From Other Emitter__
 __Sample Particles From Other Emitter__
 > 做trail除了location event也可以用这两个在子发射器上，Sample中也需要讲id勾选
+
+__System Location__
+> offset position
+
+__Set Parameters__
+> Set (Particles) Velocity -> BeamSplineTangent
+
+__Sprite Facing and Alignment__
+
+__Initial Mesh Orientation__
