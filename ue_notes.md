@@ -52,6 +52,9 @@ Camera Vector已经normalize了
 Camera Position - World Position没有normalize
 
 ## Material Nodes
+__StaticSwitchParameter__
+> 用于切换/开关
+
 __Flatten Normal__
 > 加强normal
 __Component Mask__
@@ -59,6 +62,9 @@ __Component Mask__
 
 __Make Float234__
 > float to vector
+
+__Component Mask__
+> vector to float
 
 __One minus__
 > complement
@@ -115,7 +121,7 @@ __Dynamic Paramater__
 > 可以和material属性联动
 
 __Subuv Animation__
-> 在particle update中使用，不止可以播放subuv，也可以随机取一张instance到粒子上，改成spawn only
+> 在particle update中使用，不止可以播放subuv，也可以随机取一张instance到粒子上，改成random - spawn only
 
 __Event__
 1. Generate Collision Event
@@ -141,3 +147,10 @@ __Set Parameters__
 __Sprite Facing and Alignment__
 
 __Initial Mesh Orientation__
+
+__Kill Particles In Volume__
+
+__Sprite Rotation Rate__
+> subuv选择素材后，可以用这个控制旋转
+> 可以设置为bool，用collisionResting这个属性控制bool，这样可以让落地的旋转消失
+> 需要在collision中开启Max Number of Collisions
