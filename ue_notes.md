@@ -102,6 +102,9 @@ __LinearGradient__
 __Sphere Mask__
 > create a sphere mask, input A (TexCoord), input B (0.5, 0.5) center at uv0.5, radius 0.5, hardness 0
 
+__GeneratedBand__
+> 也是mask
+
 __Frac__
 > 15.25 return 0.25
 
@@ -139,12 +142,13 @@ __Sample Particles From Other Emitter__
 > 做trail除了location event也可以用这两个在子发射器上，Sample中也需要讲id勾选
 
 __System Location__
-> offset position
+> offset position, Initialize Partizle中也有offset功能
 
 __Set Parameters__
 > Set (Particles) Velocity -> BeamSplineTangent
 
 __Sprite Facing and Alignment__
+> 也需要在sprite render中设置alignment和facing mode 
 
 __Initial Mesh Orientation__
 
@@ -154,3 +158,16 @@ __Sprite Rotation Rate__
 > subuv选择素材后，可以用这个控制旋转
 > 可以设置为bool，用collisionResting这个属性控制bool，这样可以让落地的旋转消失
 > 需要在collision中开启Max Number of Collisions
+
+__Static Mesh Location__
+> Preview Mesh中选择网格体，可以用模型发射粒子
+
+__Skeletal Mesh Location__
+> 如果想要在特定骨骼发射粒子，可以在filtered bones中选择，然后在bone sampling mode中选择Random（Filtered Bones）
+
+__Initial Mesh Orientation__
+> 如果velocity align后朝向还是不对，可以用这个改一下初始旋转，mesh orientation mode改为system，下面调整角度
+
+__用贴图发射粒子__
+1. Spawn Particles in Grid 
+2. Sample Texture(uv中Make Vector 2D -> Make Float from Vector -> Normalized Array Location)
