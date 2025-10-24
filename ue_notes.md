@@ -171,3 +171,9 @@ __Initial Mesh Orientation__
 __用贴图发射粒子__
 1. Spawn Particles in Grid 
 2. Sample Texture(uv中Make Vector 2D -> Make Float from Vector -> Normalized Array Location)
+
+__Ribbon Renderer更改分段数__
+> 在Ribbon Tessellation中调整Custom mode中Max Tessellation Factor为1可以让jitter的ribbon转折更清晰
+
+__调整Ribbon的scale__
+> 可以使用RibbonLinkOrder来代替NormalizedAge，类似houdini中的id
