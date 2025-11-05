@@ -55,8 +55,15 @@ Camera Position - World Position没有normalize
 __StaticSwitchParameter__
 > 用于切换/开关
 
+__VectorLength__
+> 计算distance
+
+SceneTexture
+> Postprocess Material
+
 __Flatten Normal__
 > 加强normal
+
 __Component Mask__
 > vector to float
 
