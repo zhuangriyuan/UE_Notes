@@ -118,6 +118,9 @@ __Frac__
 __Fmod__
 > %
 
+__3S材质__
+> 材质调为Opaque或者Masked和Subsurface
+
 ## Niagara
 
  __Translucent__ - 会显示黑色
