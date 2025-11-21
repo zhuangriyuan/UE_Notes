@@ -176,8 +176,15 @@ __Initial Mesh Orientation__
 > 如果velocity align后朝向还是不对，可以用这个改一下初始旋转，mesh orientation mode改为system，下面调整角度
 
 __用贴图发射粒子__
-1. Spawn Particles in Grid 
+1. Spawn Burst Instantaneous
 2. Sample Texture(uv中Make Vector 2D -> Make Float from Vector -> Normalized Array Location)
+3. 添加Kill Particles模块 Set Bool by Float Comparison , A为Sample Texture R，这样可以删除不要的粒子
+
+__用模型uv发射粒子__
+1. Spawn Particles in Grid 
+2. Static Mesh Location 添加模型
+3. Sample Texture放在Static Mesh Location模块下方并导入贴图，uv中SampledUV
+
 
 __Ribbon Renderer更改分段数__
 > 在Ribbon Tessellation中调整Custom mode中Max Tessellation Factor为1可以让jitter的ribbon转折更清晰
