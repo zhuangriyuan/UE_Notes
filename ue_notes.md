@@ -194,3 +194,16 @@ __Ribbon Renderer更改分段数__
 
 __调整Ribbon的scale__
 > 可以使用RibbonLinkOrder来代替NormalizedAge，类似houdini中的id
+
+### Niagara Scratch Module
+
+#### 角色闪电连接效果
+1. 在角色skeleton上随机位置生成粒子
+Map Get -> Skeletal Mesh -> Get Skinned Vertex Data -> Vertex连回MapGet -> 连接Map Set中的Particle Position
+> Sequencer中需要在粒子中attach skeleton
+> 将module添加后需要在vertex中随机值
+
+2. 使用dynamic beam连接粒子
+   Map Get -> Particle Attribute Reader -> Get Vector by Index(Attribute: Position, Execution Index) -> Map Set Emitter Position
+> 最后将面板中Module Usage Bitmask中勾选Emitter Update Script
+> Beam Start中convert Postion to Vector，将pos替换，勾选aboslute beam end
